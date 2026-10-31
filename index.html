@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sussex Leadcraft Ltd | Specialist Leadsheet Contractors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0e0e0e;--charcoal:#1c1c1e;--charcoal-mid:#252527;--off-white:#f0ece4;--white:#ffffff;--muted:rgba(240,236,228,0.48);--border:rgba(240,236,228,0.11);--border-strong:rgba(240,236,228,0.22)}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;color:var(--off-white);background:var(--charcoal);font-weight:300;line-height:1.6;overflow-x:hidden}
+.logo-link{display:flex;align-items:center;gap:.85rem;text-decoration:none}
+.logo-name{font-family:'Cinzel',serif;font-size:.95rem;font-weight:600;color:var(--white);letter-spacing:.12em;display:block}
+.logo-sub{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;font-weight:400;letter-spacing:.24em;color:rgba(255,255,255,.45);text-transform:uppercase;display:block}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,14,14,.97);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{color:rgba(240,236,228,.55);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.hero{min-height:100vh;background:var(--black);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-orb{position:absolute;right:-6vw;top:50%;transform:translateY(-50%);width:min(70vw,680px);height:min(70vw,680px);border-radius:50%;background:var(--charcoal);border:1px solid var(--border);pointer-events:none}
+.hero-orb::before{content:'';position:absolute;inset:12%;border-radius:50%;border:1px solid var(--border)}
+.hero-orb-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.07}
+.hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:9rem 2.5rem 5rem;width:100%}
+.hero-rule{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.hero-rule-line{width:44px;height:1px;background:var(--border-strong)}
+.hero-rule-text{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,4rem);font-weight:400;color:var(--white);line-height:1.18;letter-spacing:.04em;margin-bottom:1.8rem;max-width:600px}
+.hero-body{font-size:.92rem;color:var(--muted);font-weight:300;max-width:440px;line-height:1.85;margin-bottom:3rem}
+.hero-navlinks{display:flex;gap:2.5rem;flex-wrap:wrap}
+.hero-navlink{display:flex;align-items:center;gap:.5rem;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--off-white);text-decoration:none;border-bottom:1px solid var(--border-strong);padding-bottom:.4rem;transition:border-color .2s,color .2s}
+.hero-navlink:hover{color:var(--white);border-color:rgba(240,236,228,.45)}
+.hero-navlink svg{width:13px;height:13px;opacity:.55}
+.hero-stats{margin-top:5rem;display:flex;gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border);width:fit-content}
+.hero-stat{padding:1.4rem 2.2rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.hero-stat-num{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:600;color:var(--white);display:block;line-height:1;margin-bottom:.4rem}
+.hero-stat-label{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+section{padding:7rem 2.5rem}
+.container{max-width:1240px;margin:0 auto}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.63rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem}
+.eyebrow::before{content:'';display:block;width:26px;height:1px;background:var(--border-strong)}
+h2{font-family:'Cinzel',serif;font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:400;color:var(--white);line-height:1.2;letter-spacing:.04em;margin-bottom:1.2rem}
+.body-text{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.88}
+hr.divider{border:none;border-top:1px solid var(--border);margin:0}
+#about{background:var(--charcoal)}
+.about-grid{display:grid;grid-template-columns:5fr 4fr;gap:6rem;align-items:start}
+.about-body{margin-bottom:1.4rem}
+.about-list{list-style:none;margin-top:2rem;border-top:1px solid var(--border)}
+.about-list li{display:flex;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border);font-size:.83rem;font-weight:300;color:var(--off-white)}
+.about-list li::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:rgba(240,236,228,.35);flex-shrink:0}
+.about-aside{border:1px solid var(--border);padding:2.2rem;position:sticky;top:90px}
+.aside-heading{font-family:'Cinzel',serif;font-size:.85rem;font-weight:400;color:var(--white);letter-spacing:.08em;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.aside-row{padding:.9rem 0;border-bottom:1px solid var(--border)}
+.aside-row:last-of-type{border-bottom:none}
+.aside-label{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
+.aside-val{font-size:.85rem;color:var(--off-white);font-weight:300;line-height:1.5}
+.aside-grade{margin-top:1.5rem;background:var(--white);color:var(--black);text-align:center;padding:1rem;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.14em}
+.aside-grade strong{display:block;font-size:1.3rem;font-weight:600;margin-top:.2rem}
+#services{background:var(--black)}
+.services-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem;align-items:end}
+.services-table{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.service-cell{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.2rem 1.8rem;transition:background .2s}
+.service-cell:hover{background:var(--charcoal)}
+.service-num{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
+.service-name{font-family:'Cinzel',serif;font-size:.95rem;font-weight:400;color:var(--white);letter-spacing:.04em;margin-bottom:.75rem;line-height:1.35}
+.service-desc{font-size:.8rem;color:var(--muted);line-height:1.78;font-weight:300}
+#accreditation{background:var(--charcoal)}
+.accred-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.accred-rows{border-top:1px solid var(--border);margin-top:2rem}
+.accred-row{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;border-bottom:1px solid var(--border);gap:2rem}
+.accred-name{font-size:.85rem;font-weight:400;color:var(--off-white)}
+.accred-detail{font-size:.76rem;color:var(--muted);font-weight:300;margin-top:.18rem}
+.pill{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:.28rem .75rem;border:1px solid var(--border-strong);color:rgba(240,236,228,.65);white-space:nowrap;flex-shrink:0}
+.pill.hi{background:var(--white);color:var(--black);border-color:var(--white)}
+.accred-aside{border:1px solid var(--border);padding:2.2rem;position:sticky;top:90px}
+.accred-aside p{font-size:.82rem;color:var(--muted);line-height:1.88;font-weight:300;margin-bottom:1.3rem}
+.accred-aside p:last-child{margin-bottom:0}
+.accred-aside a{color:var(--off-white)}
+#portfolio{background:var(--black)}
+.portfolio-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem}
+.portfolio-note{font-size:.76rem;color:var(--muted);font-style:italic;max-width:260px;text-align:right;line-height:1.6}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.portfolio-item{border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.portfolio-img{aspect-ratio:4/3;background:var(--charcoal-mid,#252527);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.portfolio-img::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(240,236,228,.025) 0px,rgba(240,236,228,.025) 1px,transparent 1px,transparent 24px)}
+.portfolio-img-txt{position:relative;z-index:2;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,236,228,.18);text-align:center}
+.portfolio-info{padding:1.4rem}
+.portfolio-proj{font-family:'Cinzel',serif;font-size:.88rem;font-weight:400;color:var(--white);letter-spacing:.04em;margin-bottom:.25rem}
+.portfolio-meta{font-size:.74rem;color:var(--muted);font-weight:300}
+.portfolio-type{margin-top:.7rem;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,236,228,.35);display:flex;align-items:center;gap:.5rem}
+.portfolio-type::before{content:'';display:block;width:14px;height:1px;background:rgba(240,236,228,.18)}
+#contact{background:var(--charcoal)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
+.contact-body{margin-bottom:2.5rem}
+.contact-table{border-top:1px solid var(--border)}
+.contact-row{display:grid;grid-template-columns:110px 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--border);align-items:start}
+.contact-lbl{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-top:.1rem}
+.contact-val{font-size:.85rem;color:var(--off-white);font-weight:300;line-height:1.65}
+.contact-val a{color:var(--off-white);text-decoration:none}
+.contact-val a:hover{color:var(--white)}
+.form-panel{border:1px solid var(--border);padding:2.2rem}
+.form-title{font-family:'Cinzel',serif;font-size:.95rem;font-weight:400;color:var(--white);letter-spacing:.06em;margin-bottom:1.8rem;padding-bottom:1.1rem;border-bottom:1px solid var(--border)}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+.fg input,.fg textarea,.fg select{width:100%;padding:.7rem .85rem;background:var(--charcoal-mid,#252527);border:1px solid var(--border);color:var(--off-white);font-family:'Barlow',sans-serif;font-size:.85rem;font-weight:300;transition:border-color .2s;-webkit-appearance:none;appearance:none;border-radius:0}
+.fg input:focus,.fg textarea:focus,.fg select:focus{outline:none;border-color:var(--border-strong)}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(240,236,228,.2)}
+.fg select option{background:var(--charcoal-mid,#252527)}
+.fg textarea{min-height:105px;resize:vertical}
+.form-submit{width:100%;background:var(--white);color:var(--black);padding:.85rem 2rem;border:none;font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s;border-radius:0;margin-top:.4rem}
+.form-submit:hover{background:var(--off-white)}
+footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem 2.5rem}
+.footer-inner{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
+.footer-links a{color:var(--muted);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;transition:color .2s}
+.footer-links a:hover{color:var(--off-white)}
+.footer-copy{font-size:.7rem;color:var(--muted);font-weight:300;text-align:right;line-height:1.65}
+@media(max-width:960px){
+  .about-grid,.accred-grid,.contact-grid,.services-header{grid-template-columns:1fr;gap:3rem}
+  .services-table{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr 1fr}
+  .hero-orb{display:none}
+  .about-aside,.accred-aside{position:static}
+  .portfolio-header{flex-direction:column;align-items:flex-start}
+  .portfolio-note{text-align:left;max-width:100%}
+  section{padding:5rem 1.5rem}
+}
+@media(max-width:600px){
+  nav{padding:0 1.5rem}
+  .portfolio-grid{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column;width:fit-content}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-copy{text-align:left}
+  .contact-row{grid-template-columns:1fr;gap:.25rem}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero-rule{animation:fadeUp .7s ease both}
+.hero h1{animation:fadeUp .7s ease .1s both}
+.hero-body{animation:fadeUp .7s ease .2s both}
+.hero-navlinks{animation:fadeUp .7s ease .3s both}
+.hero-stats{animation:fadeUp .7s ease .4s both}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="logo-link">
+    <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+      <polygon points="2,10 20,2 38,10" stroke="white" stroke-width="1.3" fill="none"/>
+      <rect x="4" y="10" width="32" height="3" fill="white" opacity=".88"/>
+      <rect x="6" y="13" width="4.5" height="18" fill="white" opacity=".82"/>
+      <rect x="13" y="13" width="4.5" height="18" fill="white" opacity=".82"/>
+      <rect x="20" y="13" width="4.5" height="18" fill="white" opacity=".82"/>
+      <rect x="27" y="13" width="4.5" height="18" fill="white" opacity=".82"/>
+      <rect x="3" y="31" width="34" height="2.5" fill="white" opacity=".88"/>
+      <rect x="1" y="33.5" width="38" height="2" fill="white" opacity=".65"/>
+    </svg>
+    <div>
+      <span class="logo-name">Sussex Leadcraft Ltd</span>
+      <span class="logo-sub">Specialist Leadsheet Contractors</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#accreditation">Accreditations</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-orb">
+    <div class="hero-orb-icon">
+      <svg width="200" height="200" viewBox="0 0 40 40" fill="none">
+        <polygon points="2,10 20,2 38,10" stroke="white" stroke-width="1.3" fill="none"/>
+        <rect x="4" y="10" width="32" height="3" fill="white"/>
+        <rect x="6" y="13" width="4.5" height="18" fill="white"/>
+        <rect x="13" y="13" width="4.5" height="18" fill="white"/>
+        <rect x="20" y="13" width="4.5" height="18" fill="white"/>
+        <rect x="27" y="13" width="4.5" height="18" fill="white"/>
+        <rect x="3" y="31" width="34" height="2.5" fill="white"/>
+        <rect x="1" y="33.5" width="38" height="2" fill="white"/>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-rule"><span class="hero-rule-line"></span><span class="hero-rule-text">East Sussex · LCA Member · Est. 2020</span></div>
+    <h1>Specialist Leadsheet Contractors</h1>
+    <p class="hero-body">Sussex Leadcraft are specialist lead sheet contractors operating across Greater London, the South East and South West. We undertake commercial, heritage and new build contracts to the highest standard.</p>
+    <div class="hero-navlinks">
+      <a href="#services" class="hero-navlink">Services <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="#contact" class="hero-navlink">Contact <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">LCA</span><span class="hero-stat-label">Grade: Excellent</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">£200k</span><span class="hero-stat-label">Max contract value</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">25yr</span><span class="hero-stat-label">Guarantee available</span></div>
+    </div>
+  </div>
+</section>
+<section id="about"><div class="container"><div class="about-grid">
+  <div>
+    <p class="eyebrow">About</p>
+    <h2>Sussex Leadcraft Ltd</h2>
+    <p class="body-text about-body">Based in Telscombe Cliffs, East Sussex, we are a specialist lead sheet contractor with experience across commercial, residential and heritage sectors. We operate across Greater London, the South East and South West.</p>
+    <p class="body-text about-body">We hold the highest achievable grading from the Lead Contractors Association, maintained through rigorous annual on-site inspection of workmanship and design. All installations comply with BS 6915 and Lead Sheet Association recommendations.</p>
+    <p class="body-text">We work directly with main contractors, architects, quantity surveyors and building owners. We are experienced in the specific requirements of listed and historic buildings, ecclesiastical projects and large-scale commercial contracts.</p>
+    <ul class="about-list">
+      <li>General leadwork — flashings, valleys, gutters, dormers</li>
+      <li>New build roofing and cladding</li>
+      <li>Heritage and refurbishment projects</li>
+      <li>Sand cast lead supply and fix</li>
+      <li>Ornamental and architectural leadwork</li>
+      <li>Design advice and contract drawings</li>
+    </ul>
+  </div>
+  <div class="about-aside">
+    <p class="aside-heading">Company overview</p>
+    <div class="aside-row"><p class="aside-label">Registered address</p><p class="aside-val">Unit 26, The Ridings<br>Telscombe Cliffs<br>East Sussex, BN10 7EF</p></div>
+    <div class="aside-row"><p class="aside-label">Areas covered</p><p class="aside-val">Greater London · South East · South West</p></div>
+    <div class="aside-row"><p class="aside-label">Contract capacity</p><p class="aside-val">Up to £200,000</p></div>
+    <div class="aside-row"><p class="aside-label">Registration</p><p class="aside-val">Companies House 12882146</p></div>
+    <div class="aside-row"><p class="aside-label">Design services</p><p class="aside-val">Advice &amp; contract drawings</p></div>
+    <div class="aside-grade">LCA Annual Inspection Grade<strong>Excellent</strong></div>
+  </div>
+</div></div></section>
+<hr class="divider">
+<section id="services"><div class="container">
+  <div class="services-header">
+    <div><p class="eyebrow">Services</p><h2>Scope of works</h2></div>
+    <p class="body-text">We undertake the full range of specialist lead sheet work across commercial, residential and heritage sectors.</p>
+  </div>
+  <div class="services-table">
+    <div class="service-cell"><p class="service-num">01</p><p class="service-name">General Leadwork</p><p class="service-desc">Flashings, valleys, box gutters, parapet gutters, dormers and flat roofs. All work carried out to LCA standards using approved materials and fixing methods.</p></div>
+    <div class="service-cell"><p class="service-num">02</p><p class="service-name">New Build Roofing &amp; Cladding</p><p class="service-desc">Lead sheet roofing and cladding for new build schemes. We work with main contractors and developers from specification through to completion.</p></div>
+    <div class="service-cell"><p class="service-num">03</p><p class="service-name">Heritage &amp; Refurbishment</p><p class="service-desc">Specialist works to listed and historic buildings including churches, manor houses and civic structures. We understand conservation requirements and sensitive structures.</p></div>
+    <div class="service-cell"><p class="service-num">04</p><p class="service-name">Sand Cast Supply &amp; Fix</p><p class="service-desc">Traditional sand cast lead supplied and installed for high-specification heritage and ecclesiastical projects requiring period-authentic materials.</p></div>
+    <div class="service-cell"><p class="service-num">05</p><p class="service-name">Ornamental Leadwork</p><p class="service-desc">Bespoke decorative lead features including hoppers, finials, downpipes and architectural detailing. Fabricated and installed by our specialist team.</p></div>
+    <div class="service-cell"><p class="service-num">06</p><p class="service-name">Design &amp; Drawing Services</p><p class="service-desc">Pre-contract design advice and production of contract drawings to support project specification, planning and contractor liaison.</p></div>
+  </div>
+</div></section>
+<hr class="divider">
+<section id="accreditation"><div class="container"><div class="accred-grid">
+  <div>
+    <p class="eyebrow">Standards &amp; Accreditations</p>
+    <h2>Quality you can verify</h2>
+    <p class="body-text" style="margin-bottom:0">Sussex Leadcraft holds full membership of the Lead Contractors Association and is graded annually by independent on-site inspection. All work complies with BS 6915 and Lead Sheet Association recommendations.</p>
+    <div class="accred-rows">
+      <div class="accred-row"><div><p class="accred-name">Lead Contractors Association</p><p class="accred-detail">Full member — compulsory annual on-site inspection</p></div><span class="pill hi">Excellent</span></div>
+      <div class="accred-row"><div><p class="accred-name">TrustMark</p><p class="accred-detail">Government-endorsed quality scheme</p></div><span class="pill">Registered</span></div>
+      <div class="accred-row"><div><p class="accred-name">25-Year Workmanship Guarantee</p><p class="accred-detail">Available on qualifying projects over £2,500</p></div><span class="pill">LCA Scheme</span></div>
+      <div class="accred-row"><div><p class="accred-name">BS 6915 Compliant</p><p class="accred-detail">British Standard for design and installation of sheet lead</p></div><span class="pill">Compliant</span></div>
+    </div>
+  </div>
+  <div class="accred-aside">
+    <p>The Lead Contractors Association was established in 1984 to promote quality standards in leadwork. Members are subject to annual vetting which results in a published grading.</p>
+    <p>The LCA's 25-year guarantee scheme was the first workmanship guarantee of its kind in the construction industry. Each registered project is independently inspected on completion.</p>
+    <p>Sussex Leadcraft holds the highest achievable annual grade. Our membership can be verified at <a href="https://leadcontractors.co.uk/member/sussex-leadcraft-ltd/" target="_blank">leadcontractors.co.uk</a>.</p>
+  </div>
+</div></div></section>
+<hr class="divider">
+<section id="portfolio"><div class="container">
+  <div class="portfolio-header">
+    <div><p class="eyebrow">Selected Projects</p><h2>Recent works</h2></div>
+    <p class="portfolio-note">Photography being compiled. Contact us to discuss specific project types or sector experience.</p>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-item"><div class="portfolio-img"><p class="portfolio-img-txt">Image coming soon</p></div><div class="portfolio-info"><p class="portfolio-proj">Brighton Museum</p><p class="portfolio-meta">Brighton &amp; Hove · Heritage leadwork</p><p class="portfolio-type">Heritage / Civic</p></div></div>
+    <div class="portfolio-item"><div class="portfolio-img"><p class="portfolio-img-txt">Image coming soon</p></div><div class="portfolio-info"><p class="portfolio-proj">Laughton Manor</p><p class="portfolio-meta">East Sussex · Code 6 lead, sloping roof</p><p class="portfolio-type">Listed Building</p></div></div>
+    <div class="portfolio-item"><div class="portfolio-img"><p class="portfolio-img-txt">Image coming soon</p></div><div class="portfolio-info"><p class="portfolio-proj">Further projects</p><p class="portfolio-meta">Portfolio in development</p><p class="portfolio-type">Various sectors</p></div></div>
+  </div>
+</div></section>
+<hr class="divider">
+<section id="contact"><div class="container"><div class="contact-grid">
+  <div>
+    <p class="eyebrow">Contact</p>
+    <h2>Get in touch</h2>
+    <p class="body-text contact-body">For project enquiries, specification queries or general correspondence, please use the details below or the enquiry form. We aim to respond within one working day.</p>
+    <div class="contact-table">
+      <div class="contact-row"><span class="contact-lbl">Telephone</span><div class="contact-val"><a href="tel:01273584754">01273 584754</a><br><a href="tel:07837773584">07837 773584</a></div></div>
+      <div class="contact-row"><span class="contact-lbl">Email</span><div class="contact-val"><a href="mailto:sussexleadcraftltd@gmail.com">sussexleadcraftltd@gmail.com</a></div></div>
+      <div class="contact-row"><span class="contact-lbl">Address</span><div class="contact-val">Unit 26, The Ridings<br>Telscombe Cliffs<br>East Sussex, BN10 7EF</div></div>
+      <div class="contact-row"><span class="contact-lbl">Coverage</span><div class="contact-val">Greater London · South East · South West</div></div>
+    </div>
+  </div>
+  <div class="form-panel">
+    <p class="form-title">Send an enquiry</p>
+    <div class="fg"><label>Name</label><input type="text" placeholder="Your name"></div>
+    <div class="fg"><label>Company / Organisation</label><input type="text" placeholder="If applicable"></div>
+    <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+    <div class="fg"><label>Telephone</label><input type="tel"></div>
+    <div class="fg"><label>Nature of enquiry</label><select><option value="">Please select...</option><option>New Build / Commercial Contract</option><option>Heritage / Listed Building</option><option>General Leadwork</option><option>Specification / Design Advice</option><option>Sand Cast Supply &amp; Fix</option><option>Other</option></select></div>
+    <div class="fg"><label>Details</label><textarea placeholder="Project location, scope, programme..."></textarea></div>
+    <button class="form-submit">Submit Enquiry</button>
+  </div>
+</div></div></section>
+<footer>
+  <div class="footer-inner">
+    <div class="logo-link" style="pointer-events:none">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><polygon points="2,10 20,2 38,10" stroke="white" stroke-width="1.3" fill="none" opacity=".4"/><rect x="4" y="10" width="32" height="3" fill="white" opacity=".35"/><rect x="6" y="13" width="4.5" height="18" fill="white" opacity=".35"/><rect x="13" y="13" width="4.5" height="18" fill="white" opacity=".35"/><rect x="20" y="13" width="4.5" height="18" fill="white" opacity=".35"/><rect x="27" y="13" width="4.5" height="18" fill="white" opacity=".35"/><rect x="3" y="31" width="34" height="2.5" fill="white" opacity=".35"/><rect x="1" y="33.5" width="38" height="2" fill="white" opacity=".25"/></svg>
+      <span style="font-family:'Cinzel',serif;font-size:.78rem;color:rgba(240,236,228,.38);letter-spacing:.1em">Sussex Leadcraft Ltd</span>
+    </div>
+    <ul class="footer-links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#accreditation">Accreditations</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li></ul>
+    <p class="footer-copy">© 2025 Sussex Leadcraft Ltd<br>Registered in England &amp; Wales · 12882146</p>
+  </div>
+</footer>
+</body>
+</html>
