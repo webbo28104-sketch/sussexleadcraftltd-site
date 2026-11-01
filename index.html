@@ -4,11 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sussex Leadcraft Ltd | Specialist Leadsheet Contractors</title>
+<meta name="description" content="Sussex Leadcraft Ltd are LCA-graded Excellent specialist lead sheet contractors in East Sussex, covering London, the South East and South West. Heritage, new build and commercial leadwork with a 25-year guarantee available.">
+<link rel="canonical" href="https://sussexleadcraftltd.com/">
+<meta name="theme-color" content="#0e0e0e">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230e0e0e'/%3E%3Cpolygon points='2,10 20,2 38,10' stroke='white' stroke-width='1.3' fill='none'/%3E%3Cpath fill='white' d='M4 10h32v3H4zM6 13h4.5v18H6zM13 13h4.5v18H13zM20 13h4.5v18H20zM27 13h4.5v18H27zM3 31h34v2.5H3zM1 33.5h38v2H1z'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sussex Leadcraft Ltd">
+<meta property="og:title" content="Sussex Leadcraft Ltd | Specialist Leadsheet Contractors">
+<meta property="og:description" content="LCA-graded Excellent lead sheet contractors covering London, the South East and South West. Heritage, new build and commercial leadwork.">
+<meta property="og:url" content="https://sussexleadcraftltd.com/">
+<meta property="og:image" content="https://sussexleadcraftltd.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RoofingContractor","name":"Sussex Leadcraft Ltd","description":"Specialist lead sheet contractors: general leadwork, new build roofing and cladding, heritage and refurbishment, sand cast lead and ornamental leadwork.","url":"https://sussexleadcraftltd.com/","logo":"https://sussexleadcraftltd.com/apple-touch-icon.png","image":"https://sussexleadcraftltd.com/og-image.png","telephone":"+441273584754","email":"sussexleadcraftltd@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Unit 26, The Ridings","addressLocality":"Telscombe Cliffs","addressRegion":"East Sussex","postalCode":"BN10 7EF","addressCountry":"GB"},"areaServed":["Greater London","South East England","South West England"],"hasMap":"https://www.google.com/maps/search/?api=1&query=Sussex+Leadcraft+Ltd%2C+Unit+26+The+Ridings%2C+Telscombe+Cliffs+BN10+7EF","foundingDate":"2020","memberOf":{"@type":"Organization","name":"Lead Contractors Association","url":"https://leadcontractors.co.uk/"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#0e0e0e;--charcoal:#1c1c1e;--charcoal-mid:#252527;--off-white:#f0ece4;--white:#ffffff;--muted:rgba(240,236,228,0.48);--border:rgba(240,236,228,0.11);--border-strong:rgba(240,236,228,0.22)}
+:root{--black:#0e0e0e;--charcoal:#1c1c1e;--charcoal-mid:#252527;--off-white:#f0ece4;--white:#ffffff;--muted:rgba(240,236,228,0.62);--border:rgba(240,236,228,0.11);--border-strong:rgba(240,236,228,0.22)}
 html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;color:var(--off-white);background:var(--charcoal);font-weight:300;line-height:1.6;overflow-x:hidden}
 .logo-link{display:flex;align-items:center;gap:.85rem;text-decoration:none}
@@ -144,6 +161,32 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
 .hero-body{animation:fadeUp .7s ease .2s both}
 .hero-navlinks{animation:fadeUp .7s ease .3s both}
 .hero-stats{animation:fadeUp .7s ease .4s both}
+.nav-toggle{display:none;background:none;border:1px solid var(--border-strong);width:42px;height:38px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0}
+.nav-toggle span{display:block;width:18px;height:1px;background:var(--off-white);transition:transform .2s,opacity .2s}
+nav.open .nav-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+nav.open .nav-toggle span:nth-child(2){opacity:0}
+nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.call-fab{display:none}
+.project-list{border-top:1px solid var(--border)}
+.project-row{display:grid;grid-template-columns:1.2fr 1.4fr auto;gap:2rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--border)}
+.project-row .portfolio-proj{margin:0}
+.project-row .portfolio-type{margin:0}
+.gbp-link{display:inline-block;margin-top:.35rem;font-family:'Barlow Condensed',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)!important;border-bottom:1px solid var(--border-strong)}
+.gbp-link:hover{color:var(--white)!important}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:1px solid var(--off-white);outline-offset:3px}
+@media(max-width:860px){
+  .nav-toggle{display:flex}
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;background:var(--black);box-shadow:0 12px 30px rgba(0,0,0,.5);border-bottom:1px solid var(--border)}
+  nav.open .nav-links{display:flex}
+  .nav-links a{display:block;padding:1.1rem 1.5rem;border-top:1px solid var(--border);font-size:.8rem}
+  .project-row{grid-template-columns:1fr;gap:.35rem}
+}
+@media(max-width:600px){
+  .call-fab{display:flex;align-items:center;gap:.6rem;position:fixed;right:1rem;bottom:1rem;z-index:150;background:var(--white);color:var(--black);text-decoration:none;padding:.85rem 1.2rem;font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+  .call-fab svg{width:16px;height:16px}
+  footer{padding-bottom:6rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -164,7 +207,8 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
       <span class="logo-sub">Specialist Leadsheet Contractors</span>
     </div>
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#accreditation">Accreditations</a></li>
@@ -259,19 +303,18 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
   <div class="accred-aside">
     <p>The Lead Contractors Association was established in 1984 to promote quality standards in leadwork. Members are subject to annual vetting which results in a published grading.</p>
     <p>The LCA's 25-year guarantee scheme was the first workmanship guarantee of its kind in the construction industry. Each registered project is independently inspected on completion.</p>
-    <p>Sussex Leadcraft holds the highest achievable annual grade. Our membership can be verified at <a href="https://leadcontractors.co.uk/member/sussex-leadcraft-ltd/" target="_blank">leadcontractors.co.uk</a>.</p>
+    <p>Sussex Leadcraft holds the highest achievable annual grade. Our membership can be verified at <a href="https://leadcontractors.co.uk/member/sussex-leadcraft-ltd/" target="_blank" rel="noopener">leadcontractors.co.uk</a>.</p>
   </div>
 </div></div></section>
 <hr class="divider">
 <section id="portfolio"><div class="container">
   <div class="portfolio-header">
     <div><p class="eyebrow">Selected Projects</p><h2>Recent works</h2></div>
-    <p class="portfolio-note">Photography being compiled. Contact us to discuss specific project types or sector experience.</p>
+    <p class="portfolio-note">Project photography is being compiled. Contact us to discuss specific project types or sector experience.</p>
   </div>
-  <div class="portfolio-grid">
-    <div class="portfolio-item"><div class="portfolio-img"><p class="portfolio-img-txt">Image coming soon</p></div><div class="portfolio-info"><p class="portfolio-proj">Brighton Museum</p><p class="portfolio-meta">Brighton &amp; Hove · Heritage leadwork</p><p class="portfolio-type">Heritage / Civic</p></div></div>
-    <div class="portfolio-item"><div class="portfolio-img"><p class="portfolio-img-txt">Image coming soon</p></div><div class="portfolio-info"><p class="portfolio-proj">Laughton Manor</p><p class="portfolio-meta">East Sussex · Code 6 lead, sloping roof</p><p class="portfolio-type">Listed Building</p></div></div>
-    <div class="portfolio-item"><div class="portfolio-img"><p class="portfolio-img-txt">Image coming soon</p></div><div class="portfolio-info"><p class="portfolio-proj">Further projects</p><p class="portfolio-meta">Portfolio in development</p><p class="portfolio-type">Various sectors</p></div></div>
+  <div class="project-list">
+    <div class="project-row"><p class="portfolio-proj">Brighton Museum</p><p class="portfolio-meta">Brighton &amp; Hove · Heritage leadwork</p><p class="portfolio-type">Heritage / Civic</p></div>
+    <div class="project-row"><p class="portfolio-proj">Laughton Manor</p><p class="portfolio-meta">East Sussex · Code 6 lead, sloping roof</p><p class="portfolio-type">Listed Building</p></div>
   </div>
 </div></section>
 <hr class="divider">
@@ -283,11 +326,11 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
     <div class="contact-table">
       <div class="contact-row"><span class="contact-lbl">Telephone</span><div class="contact-val"><a href="tel:01273584754">01273 584754</a><br><a href="tel:07837773584">07837 773584</a></div></div>
       <div class="contact-row"><span class="contact-lbl">Email</span><div class="contact-val"><a href="mailto:sussexleadcraftltd@gmail.com">sussexleadcraftltd@gmail.com</a><br><a href="mailto:marc@sussexleadcraftltd.com">marc@sussexleadcraftltd.com</a></div></div>
-      <div class="contact-row"><span class="contact-lbl">Address</span><div class="contact-val">Unit 26, The Ridings<br>Telscombe Cliffs<br>East Sussex, BN10 7EF</div></div>
+      <div class="contact-row"><span class="contact-lbl">Address</span><div class="contact-val">Unit 26, The Ridings<br>Telscombe Cliffs<br>East Sussex, BN10 7EF<br><a class="gbp-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sussex+Leadcraft+Ltd%2C+Unit+26+The+Ridings%2C+Telscombe+Cliffs+BN10+7EF" target="_blank" rel="noopener">View on Google Maps</a></div></div>
       <div class="contact-row"><span class="contact-lbl">Coverage</span><div class="contact-val">Greater London · South East · South West</div></div>
     </div>
   </div>
-  <form class="form-panel" id="enquiry-form" action="https://formsubmit.co/sussexleadcraftltd@gmail.com" method="POST">
+  <form class="form-panel" id="enquiry-form" action="https://formsubmit.co/accounts@sussexleadcraftltd.com" method="POST">
     <p class="form-title">Send an enquiry</p>
     <input type="hidden" name="_subject" value="New website enquiry – sussexleadcraftltd.com">
     <input type="hidden" name="_template" value="table">
@@ -311,10 +354,17 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
       <span style="font-family:'Cinzel',serif;font-size:.78rem;color:rgba(240,236,228,.38);letter-spacing:.1em">Sussex Leadcraft Ltd</span>
     </div>
     <ul class="footer-links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#accreditation">Accreditations</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li></ul>
-    <p class="footer-copy">© 2025 Sussex Leadcraft Ltd<br>Registered in England &amp; Wales · 12882146</p>
+    <p class="footer-copy">© <span id="yr">2026</span> Sussex Leadcraft Ltd<br>Registered in England &amp; Wales · 12882146</p>
   </div>
 </footer>
+<a class="call-fab" href="tel:07837773584" aria-label="Call Sussex Leadcraft on 07837 773584"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call now</a>
 <script>
+(function(){
+  var n=document.querySelector('nav'),t=n.querySelector('.nav-toggle');
+  t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');});
+  n.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');});});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
 (function(){
   var f=document.getElementById('enquiry-form'),st=document.getElementById('form-status');
   if(location.hash==='#enquiry-sent'){st.textContent='Thank you — your enquiry has been sent. We aim to respond within one working day.';}
@@ -322,10 +372,10 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var b=f.querySelector('.form-submit');b.disabled=true;b.textContent='Sending…';st.className='form-status';st.textContent='';
-    fetch('https://formsubmit.co/ajax/sussexleadcraftltd@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://formsubmit.co/ajax/accounts@sussexleadcraftltd.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)!=='true')throw new Error(d.message||'Send failed');});})
       .then(function(){f.reset();st.textContent='Thank you — your enquiry has been sent. We aim to respond within one working day.';})
-      .catch(function(){st.className='form-status err';st.innerHTML='Sorry, that didn\u2019t send. Please email <a href="mailto:sussexleadcraftltd@gmail.com" style="color:inherit">sussexleadcraftltd@gmail.com</a> or call 01273 584754.';})
+      .catch(function(){st.className='form-status err';st.innerHTML='Sorry, that didn\u2019t send. Please email <a href="mailto:accounts@sussexleadcraftltd.com" style="color:inherit">accounts@sussexleadcraftltd.com</a> or call 01273 584754.';})
       .finally(function(){b.disabled=false;b.textContent='Submit Enquiry';});
   });
 })();
