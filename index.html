@@ -110,6 +110,10 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
 .fg textarea{min-height:105px;resize:vertical}
 .form-submit{width:100%;background:var(--white);color:var(--black);padding:.85rem 2rem;border:none;font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s;border-radius:0;margin-top:.4rem}
 .form-submit:hover{background:var(--off-white)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-status{margin-top:1rem;font-size:.82rem;line-height:1.6;color:var(--off-white);min-height:1.2em}
+.form-status.err{color:#e8a0a0}
+.form-submit:disabled{opacity:.6;cursor:wait}
 footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem 2.5rem}
 .footer-inner{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
 .footer-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
@@ -283,16 +287,22 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
       <div class="contact-row"><span class="contact-lbl">Coverage</span><div class="contact-val">Greater London · South East · South West</div></div>
     </div>
   </div>
-  <div class="form-panel">
+  <form class="form-panel" id="enquiry-form" action="https://formsubmit.co/sussexleadcraftltd@gmail.com" method="POST">
     <p class="form-title">Send an enquiry</p>
-    <div class="fg"><label>Name</label><input type="text" placeholder="Your name"></div>
-    <div class="fg"><label>Company / Organisation</label><input type="text" placeholder="If applicable"></div>
-    <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com"></div>
-    <div class="fg"><label>Telephone</label><input type="tel"></div>
-    <div class="fg"><label>Nature of enquiry</label><select><option value="">Please select...</option><option>New Build / Commercial Contract</option><option>Heritage / Listed Building</option><option>General Leadwork</option><option>Specification / Design Advice</option><option>Sand Cast Supply &amp; Fix</option><option>Other</option></select></div>
-    <div class="fg"><label>Details</label><textarea placeholder="Project location, scope, programme..."></textarea></div>
-    <button class="form-submit">Submit Enquiry</button>
-  </div>
+    <input type="hidden" name="_subject" value="New website enquiry – sussexleadcraftltd.com">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://sussexleadcraftltd.com/#enquiry-sent">
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="fg"><label for="f-name">Name</label><input id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
+    <div class="fg"><label for="f-company">Company / Organisation</label><input id="f-company" name="company" type="text" placeholder="If applicable" autocomplete="organization"></div>
+    <div class="fg"><label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required></div>
+    <div class="fg"><label for="f-tel">Telephone</label><input id="f-tel" name="telephone" type="tel" autocomplete="tel"></div>
+    <div class="fg"><label for="f-type">Nature of enquiry</label><select id="f-type" name="enquiry_type" required><option value="">Please select...</option><option>New Build / Commercial Contract</option><option>Heritage / Listed Building</option><option>General Leadwork</option><option>Specification / Design Advice</option><option>Sand Cast Supply &amp; Fix</option><option>Other</option></select></div>
+    <div class="fg"><label for="f-details">Details</label><textarea id="f-details" name="details" placeholder="Project location, scope, programme..." required></textarea></div>
+    <button type="submit" class="form-submit">Submit Enquiry</button>
+    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+  </form>
 </div></div></section>
 <footer>
   <div class="footer-inner">
@@ -304,5 +314,21 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.8rem
     <p class="footer-copy">© 2025 Sussex Leadcraft Ltd<br>Registered in England &amp; Wales · 12882146</p>
   </div>
 </footer>
+<script>
+(function(){
+  var f=document.getElementById('enquiry-form'),st=document.getElementById('form-status');
+  if(location.hash==='#enquiry-sent'){st.textContent='Thank you — your enquiry has been sent. We aim to respond within one working day.';}
+  if(!window.fetch)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=f.querySelector('.form-submit');b.disabled=true;b.textContent='Sending…';st.className='form-status';st.textContent='';
+    fetch('https://formsubmit.co/ajax/sussexleadcraftltd@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)!=='true')throw new Error(d.message||'Send failed');});})
+      .then(function(){f.reset();st.textContent='Thank you — your enquiry has been sent. We aim to respond within one working day.';})
+      .catch(function(){st.className='form-status err';st.innerHTML='Sorry, that didn\u2019t send. Please email <a href="mailto:sussexleadcraftltd@gmail.com" style="color:inherit">sussexleadcraftltd@gmail.com</a> or call 01273 584754.';})
+      .finally(function(){b.disabled=false;b.textContent='Submit Enquiry';});
+  });
+})();
+</script>
 </body>
 </html>
