@@ -372,10 +372,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var b=f.querySelector('.form-submit');b.disabled=true;b.textContent='Sending…';st.className='form-status';st.textContent='';
-    fetch('https://formsubmit.co/ajax/accounts@sussexleadcraftltd.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    var ctl=window.AbortController?new AbortController():null;if(ctl)setTimeout(function(){ctl.abort();},15000);
+    fetch('https://formsubmit.co/ajax/accounts@sussexleadcraftltd.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f),signal:ctl?ctl.signal:undefined})
       .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)!=='true')throw new Error(d.message||'Send failed');});})
       .then(function(){f.reset();st.textContent='Thank you — your enquiry has been sent. We aim to respond within one working day.';})
-      .catch(function(){st.className='form-status err';st.innerHTML='Sorry, that didn\u2019t send. Please email <a href="mailto:accounts@sussexleadcraftltd.com" style="color:inherit">accounts@sussexleadcraftltd.com</a> or call 01273 584754.';})
+      .catch(function(){
+        var v=function(n){var el=f.elements[n];return el&&el.value?el.value:'';};
+        var body='Name: '+v('name')+'\nCompany: '+v('company')+'\nEmail: '+v('email')+'\nTelephone: '+v('telephone')+'\nNature of enquiry: '+v('enquiry_type')+'\n\nDetails:\n'+v('details');
+        var href='mailto:accounts@sussexleadcraftltd.com?subject='+encodeURIComponent('Website enquiry'+(v('name')?' – '+v('name'):''))+'&body='+encodeURIComponent(body);
+        st.className='form-status err';
+        st.innerHTML='Our form service isn\u2019t responding right now. <a href="'+href+'" style="color:inherit;font-weight:600">Tap here to send your enquiry by email</a> (your details are filled in), or call 01273 584754.';
+      })
       .finally(function(){b.disabled=false;b.textContent='Submit Enquiry';});
   });
 })();
