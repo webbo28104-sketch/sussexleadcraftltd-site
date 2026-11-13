@@ -1,0 +1,91 @@
+{
+  "projects": [
+    {
+      "id": "brighton-museum",
+      "added": "2026-11-13",
+      "title": "Brighton Museum & Art Gallery",
+      "category": "Heritage / Civic",
+      "summary": "Brighton · Milled lead roof & gutter linings",
+      "specs": [
+        "275 m² Code 5 milled lead pitched roof",
+        "95 lm Code 6 & 7 milled lead tapered gutter linings, including treated wood-cored rolls",
+        "Chalk slurry applied to the underside of each individual bay",
+        "Fully ventilated using Nicholson Airtrak BRV2-FR & PE120-FR"
+      ],
+      "photos": [
+        {
+          "file": "images/projects/brighton-museum/01.jpg",
+          "thumb": "images/projects/brighton-museum/01-sm.jpg",
+          "w": 862,
+          "h": 572,
+          "tw": 640,
+          "th": 425,
+          "alt": "Completed milled lead pitched roof at Brighton Museum & Art Gallery"
+        },
+        {
+          "file": "images/projects/brighton-museum/02.jpg",
+          "thumb": "images/projects/brighton-museum/02-sm.jpg",
+          "w": 1179,
+          "h": 1570,
+          "tw": 481,
+          "th": 640,
+          "alt": "Wood-cored rolls running down the lead pitch beneath the temporary roof scaffold"
+        },
+        {
+          "file": "images/projects/brighton-museum/03.jpg",
+          "thumb": "images/projects/brighton-museum/03-sm.jpg",
+          "w": 1179,
+          "h": 1574,
+          "tw": 479,
+          "th": 640,
+          "alt": "Close-up of lead bays, rolls and drips"
+        },
+        {
+          "file": "images/projects/brighton-museum/04.jpg",
+          "thumb": "images/projects/brighton-museum/04-sm.jpg",
+          "w": 1179,
+          "h": 1549,
+          "tw": 487,
+          "th": 640,
+          "alt": "Rolls and drips across both slopes of the lead roof"
+        },
+        {
+          "file": "images/projects/brighton-museum/05.jpg",
+          "thumb": "images/projects/brighton-museum/05-sm.jpg",
+          "w": 1179,
+          "h": 1574,
+          "tw": 479,
+          "th": 640,
+          "alt": "Long view of the lead pitch alongside the scaffold walkway"
+        },
+        {
+          "file": "images/projects/brighton-museum/06.jpg",
+          "thumb": "images/projects/brighton-museum/06-sm.jpg",
+          "w": 1179,
+          "h": 1570,
+          "tw": 481,
+          "th": 640,
+          "alt": "Lead bay dressed into the gutter lining during installation"
+        },
+        {
+          "file": "images/projects/brighton-museum/07.jpg",
+          "thumb": "images/projects/brighton-museum/07-sm.jpg",
+          "w": 1179,
+          "h": 1533,
+          "tw": 492,
+          "th": 640,
+          "alt": "Welded lead outlet in the gutter lining"
+        }
+      ]
+    },
+    {
+      "id": "laughton-manor",
+      "added": "2026-11-01",
+      "title": "Laughton Manor",
+      "category": "Listed Building",
+      "summary": "East Sussex · Code 6 lead, sloping roof",
+      "specs": [],
+      "photos": []
+    }
+  ]
+}
