@@ -171,6 +171,23 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
 .project-row{display:grid;grid-template-columns:1.2fr 1.4fr auto;gap:2rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--border)}
 .project-row .portfolio-proj{margin:0}
 .project-row .portfolio-type{margin:0}
+.project-features{display:grid;gap:3rem;margin-bottom:3rem}
+.project-feature{display:grid;grid-template-columns:1.5fr 1fr;gap:2.5rem;border-top:1px solid var(--border);padding-top:2.5rem}
+.pf-main{display:block;aspect-ratio:3/2;overflow:hidden;background:var(--charcoal-mid)}
+.pf-main img,.pf-thumbs img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .2s}
+.pf-main:hover img,.pf-thumbs a:hover img{opacity:.85}
+.pf-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem;margin-top:.4rem}
+.pf-thumbs a{display:block;aspect-ratio:1;overflow:hidden;background:var(--charcoal-mid)}
+.pf-info .portfolio-type{margin:0 0 .9rem}
+.pf-title{font-family:'Cinzel',serif;font-size:1.25rem;font-weight:400;color:var(--white);letter-spacing:.04em;line-height:1.3;margin-bottom:.35rem}
+.pf-spec{list-style:none;margin-top:1.4rem;border-top:1px solid var(--border)}
+.pf-spec li{font-size:.86rem;line-height:1.55;padding:.75rem 0;border-bottom:1px solid var(--border)}
+.lightbox{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;overflow:hidden}
+.lightbox::backdrop{background:rgba(8,8,8,.94)}
+.lightbox img{position:absolute;inset:0;margin:auto;max-width:calc(100vw - 2rem);max-height:calc(100vh - 6rem);object-fit:contain}
+.lightbox button{position:absolute;background:rgba(14,14,14,.7);border:1px solid var(--border-strong);color:var(--off-white);font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;padding:.7rem 1rem;cursor:pointer}
+.lb-close{top:1rem;right:1rem}.lb-prev{left:1rem;bottom:1rem}.lb-next{right:1rem;bottom:1rem}
+@media(max-width:860px){.project-feature{grid-template-columns:1fr;gap:1.5rem}.pf-thumbs{grid-template-columns:repeat(3,1fr)}}
 .gbp-link{display:inline-block;margin-top:.35rem;font-family:'Barlow Condensed',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)!important;border-bottom:1px solid var(--border-strong)}
 .gbp-link:hover{color:var(--white)!important}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:1px solid var(--off-white);outline-offset:3px}
@@ -310,10 +327,37 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section id="portfolio"><div class="container">
   <div class="portfolio-header">
     <div><p class="eyebrow">Selected Projects</p><h2>Recent works</h2></div>
-    <p class="portfolio-note">Project photography is being compiled. Contact us to discuss specific project types or sector experience.</p>
+    <p class="portfolio-note">New projects are added as they complete. Contact us to discuss specific project types or sector experience.</p>
+  </div>
+  <div class="project-features">
+<!-- PROJECTS:START (newest first; one <article> per project) -->
+    <article class="project-feature" id="project-brighton-museum">
+      <div class="pf-gallery">
+        <a class="pf-main" href="images/projects/brighton-museum/01.jpg"><img src="images/projects/brighton-museum/01.jpg" width="862" height="572" alt="Completed milled lead pitched roof at Brighton Museum &amp; Art Gallery"></a>
+        <div class="pf-thumbs">
+          <a href="images/projects/brighton-museum/02.jpg"><img src="images/projects/brighton-museum/02-sm.jpg" width="481" height="640" loading="lazy" alt="Wood-cored rolls running down the lead pitch beneath the temporary roof scaffold"></a>
+          <a href="images/projects/brighton-museum/03.jpg"><img src="images/projects/brighton-museum/03-sm.jpg" width="479" height="640" loading="lazy" alt="Close-up of lead bays, rolls and drips"></a>
+          <a href="images/projects/brighton-museum/04.jpg"><img src="images/projects/brighton-museum/04-sm.jpg" width="487" height="640" loading="lazy" alt="Rolls and drips across both slopes of the lead roof"></a>
+          <a href="images/projects/brighton-museum/05.jpg"><img src="images/projects/brighton-museum/05-sm.jpg" width="479" height="640" loading="lazy" alt="Long view of the lead pitch alongside the scaffold walkway"></a>
+          <a href="images/projects/brighton-museum/06.jpg"><img src="images/projects/brighton-museum/06-sm.jpg" width="481" height="640" loading="lazy" alt="Lead bay dressed into the gutter lining during installation"></a>
+          <a href="images/projects/brighton-museum/07.jpg"><img src="images/projects/brighton-museum/07-sm.jpg" width="492" height="640" loading="lazy" alt="Welded lead outlet in the gutter lining"></a>
+        </div>
+      </div>
+      <div class="pf-info">
+        <p class="portfolio-type">Heritage / Civic</p>
+        <h3 class="pf-title">Brighton Museum &amp; Art Gallery</h3>
+        <p class="portfolio-meta">Brighton · Milled lead roof &amp; gutter linings</p>
+        <ul class="pf-spec">
+          <li>275&nbsp;m² Code 5 milled lead pitched roof</li>
+          <li>95&nbsp;lm Code 6 &amp; 7 milled lead tapered gutter linings, including treated wood-cored rolls</li>
+          <li>Chalk slurry applied to the underside of each individual bay</li>
+          <li>Fully ventilated using Nicholson Airtrak BRV2-FR &amp; PE120-FR</li>
+        </ul>
+      </div>
+    </article>
+<!-- PROJECTS:END -->
   </div>
   <div class="project-list">
-    <div class="project-row"><p class="portfolio-proj">Brighton Museum</p><p class="portfolio-meta">Brighton &amp; Hove · Heritage leadwork</p><p class="portfolio-type">Heritage / Civic</p></div>
     <div class="project-row"><p class="portfolio-proj">Laughton Manor</p><p class="portfolio-meta">East Sussex · Code 6 lead, sloping roof</p><p class="portfolio-type">Listed Building</p></div>
   </div>
 </div></section>
@@ -364,6 +408,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');});
   n.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open menu');});});
   document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+(function(){
+  var d=document.createElement('dialog');if(!d.showModal)return;
+  d.className='lightbox';d.setAttribute('aria-label','Project photo');
+  d.innerHTML='<img alt=""><button class="lb-close" type="button">Close ✕</button><button class="lb-prev" type="button">‹ Prev</button><button class="lb-next" type="button">Next ›</button>';
+  document.body.appendChild(d);
+  var img=d.querySelector('img'),set=[],i=0;
+  function show(){var a=set[i];img.src=a.getAttribute('href');img.alt=a.querySelector('img').alt;}
+  function step(n){i=(i+n+set.length)%set.length;show();}
+  document.querySelectorAll('.pf-gallery').forEach(function(g){
+    var links=[].slice.call(g.querySelectorAll('a'));
+    links.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();set=links;i=k;show();d.showModal();});});
+  });
+  d.querySelector('.lb-close').onclick=function(){d.close();};
+  d.querySelector('.lb-prev').onclick=function(){step(-1);};
+  d.querySelector('.lb-next').onclick=function(){step(1);};
+  d.addEventListener('click',function(e){if(e.target===d)d.close();});
+  d.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
 })();
 (function(){
   var f=document.getElementById('enquiry-form'),st=document.getElementById('form-status');
