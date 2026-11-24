@@ -1,6 +1,84 @@
 {
   "projects": [
     {
+      "id": "brighton-museum-art-gallery",
+      "added": "2026-11-24",
+      "title": "Brighton Museum & Art Gallery",
+      "category": "Heritage / Civic",
+      "summary": "Brighton · Milled lead pitched roof and gutter linings",
+      "specs": [
+        "275m² Code 5 milled lead pitched roof",
+        "95lm Code 6 & 7 milled lead tapered gutter linings, including treated wood cored rolls",
+        "Chalk slurry applied to the underside of each individual bay",
+        "Fully vented using Nicholson Airtrak BRV2-FR & PE120-FR"
+      ],
+      "photos": [
+        {
+          "file": "images/projects/brighton-museum-art-gallery/01.jpg",
+          "thumb": "images/projects/brighton-museum-art-gallery/01-sm.jpg",
+          "w": 862,
+          "h": 572,
+          "tw": 640,
+          "th": 425,
+          "alt": "Wide view of the finished milled lead pitched roof with the green domes of Brighton Museum behind"
+        },
+        {
+          "file": "images/projects/brighton-museum-art-gallery/02.jpg",
+          "thumb": "images/projects/brighton-museum-art-gallery/02-sm.jpg",
+          "w": 1179,
+          "h": 1549,
+          "tw": 487,
+          "th": 640,
+          "alt": "Long run of lead bays and rolls down the pitch beside the gutter"
+        },
+        {
+          "file": "images/projects/brighton-museum-art-gallery/03.jpg",
+          "thumb": "images/projects/brighton-museum-art-gallery/03-sm.jpg",
+          "w": 1179,
+          "h": 1574,
+          "tw": 479,
+          "th": 640,
+          "alt": "Close view of lead bays, rolls and drips with fastening clips"
+        },
+        {
+          "file": "images/projects/brighton-museum-art-gallery/04.jpg",
+          "thumb": "images/projects/brighton-museum-art-gallery/04-sm.jpg",
+          "w": 1179,
+          "h": 1570,
+          "tw": 481,
+          "th": 640,
+          "alt": "Milled lead bays with wood cored rolls and a stepped drip, scaffold above"
+        },
+        {
+          "file": "images/projects/brighton-museum-art-gallery/05.jpg",
+          "thumb": "images/projects/brighton-museum-art-gallery/05-sm.jpg",
+          "w": 1179,
+          "h": 1574,
+          "tw": 479,
+          "th": 640,
+          "alt": "Pitched lead roof with the tapered gutter lining alongside the scaffold walkway"
+        },
+        {
+          "file": "images/projects/brighton-museum-art-gallery/06.jpg",
+          "thumb": "images/projects/brighton-museum-art-gallery/06-sm.jpg",
+          "w": 1179,
+          "h": 1533,
+          "tw": 492,
+          "th": 640,
+          "alt": "Close-up of a welded lead outlet"
+        },
+        {
+          "file": "images/projects/brighton-museum-art-gallery/07.jpg",
+          "thumb": "images/projects/brighton-museum-art-gallery/07-sm.jpg",
+          "w": 1179,
+          "h": 1570,
+          "tw": 481,
+          "th": 640,
+          "alt": "Lead gutter lining detail at an abutment, with the roof still in progress"
+        }
+      ]
+    },
+    {
       "id": "laughton-manor",
       "added": "2026-11-01",
       "title": "Laughton Manor",
