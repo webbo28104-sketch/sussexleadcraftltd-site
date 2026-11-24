@@ -125,12 +125,31 @@ def main():
 '''
     open(os.path.join(ROOT, "portfolio.html"), "w").write(head + body + tail)
 
+    # ---- privacy notice, same shell as the portfolio page
+    phead = idx[:head_end]
+    phead = re.sub(r"<title>.*?</title>", "<title>Privacy | Sussex Leadcraft Ltd</title>", phead, count=1)
+    pdesc = "How Sussex Leadcraft Ltd handles the personal information you send us."
+    phead = re.sub(r'(<meta name="description" content=")[^"]*', r"\g<1>" + pdesc, phead, count=1)
+    phead = re.sub(r'(<meta property="og:description" content=")[^"]*', r"\g<1>" + pdesc, phead, count=1)
+    phead = re.sub(r'(<meta property="og:title" content=")[^"]*', r"\g<1>Privacy | Sussex Leadcraft Ltd", phead, count=1)
+    phead = phead.replace(f'<link rel="canonical" href="{SITE}/">', f'<link rel="canonical" href="{SITE}/privacy.html">')
+    phead = phead.replace(f'<meta property="og:url" content="{SITE}/">', f'<meta property="og:url" content="{SITE}/privacy.html">')
+    phead = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', "", phead, count=1, flags=re.S)
+    ptext = open(os.path.join(ROOT, "_portfolio", "privacy.html")).read()
+    pbody = f'''<section id="privacy" class="portfolio-page"><div class="container pf-desc" style="max-width:760px">
+{ptext}
+</div></section>
+<hr class="divider">
+'''
+    open(os.path.join(ROOT, "privacy.html"), "w").write(fix_links(phead) + pbody + tail)
+
     # ---- sitemap
     today = datetime.date.today().isoformat()
     open(os.path.join(ROOT, "sitemap.xml"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         f"  <url><loc>{SITE}/</loc><lastmod>{today}</lastmod></url>\n"
-        f"  <url><loc>{SITE}/portfolio.html</loc><lastmod>{today}</lastmod></url>\n</urlset>\n")
+        f"  <url><loc>{SITE}/portfolio.html</loc><lastmod>{today}</lastmod></url>\n"
+        f"  <url><loc>{SITE}/privacy.html</loc><lastmod>{today}</lastmod></url>\n</urlset>\n")
     print(f"Built: {min(n, HOME_LIMIT)} on homepage, {n} on portfolio.html")
 
 
