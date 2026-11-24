@@ -210,6 +210,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 </style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="6be459ac-45c4-4ced-9f77-8edb5a1c1fee"></script>
 </head>
 <body>
 <nav>
@@ -437,11 +438,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   if(!window.fetch)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
+    var v0=(f.elements['enquiry_type']&&f.elements['enquiry_type'].value)||'';
     var b=f.querySelector('.form-submit');b.disabled=true;b.textContent='Sending…';st.className='form-status';st.textContent='';
     var ctl=window.AbortController?new AbortController():null;if(ctl)setTimeout(function(){ctl.abort();},15000);
     fetch('https://formsubmit.co/ajax/accounts@sussexleadcraftltd.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f),signal:ctl?ctl.signal:undefined})
       .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)!=='true')throw new Error(d.message||'Send failed');});})
-      .then(function(){f.reset();st.textContent='Thank you — your enquiry has been sent. We aim to respond within one working day.';})
+      .then(function(){if(window.umami)umami.track('Enquiry sent',{type:v0});f.reset();st.textContent='Thank you — your enquiry has been sent. We aim to respond within one working day.';})
       .catch(function(){
         var v=function(n){var el=f.elements[n];return el&&el.value?el.value:'';};
         var body='Name: '+v('name')+'\nCompany: '+v('company')+'\nEmail: '+v('email')+'\nTelephone: '+v('telephone')+'\nNature of enquiry: '+v('enquiry_type')+'\n\nDetails:\n'+v('details');
@@ -450,6 +452,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         st.innerHTML='Our form service isn\u2019t responding right now. <a href="'+href+'" style="color:inherit;font-weight:600">Tap here to send your enquiry by email</a> (your details are filled in), or call 01273 584754.';
       })
       .finally(function(){b.disabled=false;b.textContent='Submit Enquiry';});
+  });
+})();
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+    if(!a||!window.umami)return;
+    var h=a.getAttribute('href');
+    umami.track(h.indexOf('tel:')===0?'Phone tap':'Email tap',{to:h.replace(/^(tel|mailto):/,'').split('?')[0],where:a.classList.contains('call-fab')?'call button':'page'});
   });
 })();
 </script>
